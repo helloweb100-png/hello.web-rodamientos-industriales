@@ -382,6 +382,9 @@ body.menu-open .nav { background: #fff; }
   transition: opacity 0.3s, color 0.3s; white-space: nowrap;
 }
 .brand:hover { opacity: 1; color: var(--blue); }
+.brand--logo { display: flex; align-items: center; opacity: 1; }
+.brand--logo img { height: clamp(30px, 3.6vw, 46px); width: auto; max-width: none; filter: grayscale(1); opacity: 0.65; transition: filter 0.3s, opacity 0.3s; }
+.brand--logo:hover img { filter: none; opacity: 1; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 /* =====================================================================
@@ -405,7 +408,7 @@ body.menu-open .nav { background: #fff; }
 .kpi--cta .link-arrow { color: #fff; align-self: flex-start; }
 .kpi--cta .link-arrow:hover { color: #9cc0ff; }
 @media (min-width: 900px) {
-  .kpis__grid { grid-template-columns: repeat(3, 1fr) 1.3fr; padding-block: 0; }
+  .kpis__grid { grid-template-columns: repeat(2, 1fr) 1.3fr; padding-block: 0; }
   .kpi { padding: 44px 28px; border-bottom: 0; border-left: 1px solid var(--line); }
   .kpi:first-child { padding-left: 0; border-left: 0; }
   .kpi:nth-child(even) { padding-left: 28px; }
@@ -492,6 +495,7 @@ body.menu-open .nav { background: #fff; }
 .panel__body h3 { font-size: 1.5rem; font-stretch: 105%; }
 .panel__n { margin: 8px 0 12px; font: 500 0.74rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); }
 .panel__body > p:not(.panel__n):not(.panel__b) { color: var(--muted); font-size: 0.98rem; }
+.panel__body h3 + p:not(.panel__n) { margin-top: 12px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
 .chips li { padding: 6px 10px; font: 500 0.74rem/1 var(--mono); color: var(--ink-2); background: var(--paper); border: 1px solid var(--line); }
 .panel__b { font-size: 0.86rem; color: var(--muted); }
@@ -713,6 +717,8 @@ body.menu-open .nav { background: #fff; }
 .contact__list span { display: block; font: 500 0.72rem/1.2 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .contact__list a { font-weight: 700; font-size: clamp(0.92rem, 4.1vw, 1.1rem); color: var(--ink); text-decoration: none; word-break: break-word; transition: color 0.3s; }
 .contact__list a:hover { color: var(--blue); }
+.contact__list address { margin-top: 4px; font-style: normal; font-weight: 700; font-size: clamp(0.92rem, 4.1vw, 1.1rem); line-height: 1.35; color: var(--ink); }
+.contact__list a.contact__map { display: inline-block; margin-top: 6px; font-size: 0.9rem; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
 
 .form {
   display: grid; gap: 18px; grid-template-columns: 1fr;
